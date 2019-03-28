@@ -4,7 +4,7 @@ from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from Q1Code import Simple_drawing_window
 
-class Simple_drawing_window(QWidget):
+class Simple_drawing_window2(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
         self.setWindowTitle("Simple Drawing")
@@ -35,7 +35,7 @@ class Simple_drawing_window(QWidget):
 def main():
     app = QApplication(sys.argv)
 
-    w = Simple_drawing_window()
+    w = Simple_drawing_window2()
     w.show()
 
     return app.exec_()
