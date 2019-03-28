@@ -1,3 +1,4 @@
+import turtle
 import sys
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
@@ -10,23 +11,25 @@ class Simple_drawing_window(QWidget):
         self.rabbit = QPixmap("./rabbit.png")
 
     def paintEvent(self, e):
+
+
         p = QPainter()
         p.begin(self)
 
         p.setPen(QColor(0, 0, 0))
-        p.setBrush(QColor(0, 127, 0))
+        p.setBrush(QColor(0, 127, 0))#0 127 0
         p.drawPolygon([
             QPoint(70, 100), QPoint(100,110),
             QPoint(130,100), QPoint(100,150),
         ])
 
-        p.setPen(QColor(255, 127, 0))
-        p.setBrush(QColor(255,127,0))
-        p.drawPie(50, 150, 100, 100,0 ,180 * 15)
+        p.setPen(QColor(220, 20, 60))
+        p.setBrush(QColor(220,20,60))
+        p.drawPie(50, 150, 100, 100,0 , 1500 * 4)
 
-        p.drawPolygon(
-            [QPoint(50, 200), QPoint(150, 200), QPoint(100, 400)]
-        )
+        #p.drawPolygon(
+        #    [QPoint(50, 200), QPoint(150, 200), QPoint(100, 400)]
+        #)
 
         p.drawPixmap(QRect(200, 100, 320,320), self.rabbit)
         p.end()
