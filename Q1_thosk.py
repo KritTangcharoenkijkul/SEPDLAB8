@@ -2,11 +2,11 @@ import sys
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
+from Q1Code import Simple_drawing_window
 
-class Simple_drawing_window(QWidget):
+class Simple_drawing_window1(Simple_drawing_window):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Drawing")
         self.rabbit = QPixmap("./dragonite.jpg")
 
     def paintEvent(self, e):
@@ -34,7 +34,7 @@ class Simple_drawing_window(QWidget):
 def main():
     app = QApplication(sys.argv)
 
-    w = Simple_drawing_window()
+    w = Simple_drawing_window1()
     w.show()
 
     return app.exec_()
